@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Contact Page – own CSS/JS -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact – Transport Management</title>
+  <link rel="stylesheet" href="css/contact.css" />
+</head>
+<body>
+  
+<header>
+  <div class="container nav">
+    <div class="logo">TM <span>Compliance</span></div>
+    <nav>
+      <a href="index.html" >Home</a>
+      <a href="about.html" >About</a>
+      <a href="services.html" >Services</a>
+      <a href="pricing.html" >Pricing</a>
+      <a href="contact.html" style="opacity:1;font-weight:700">Contact</a>
+      <a href="blog.html" >Blog</a>
+      <button class="cta" id="bookBtn">Book Consultation</button>
+    </nav>
+  </div>
+</header>
+
+  <main class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <p class="muted">Fill in the form and we’ll get back within 1 business day.</p>
+      <div class="card">
+        <div id="contactSuccess" class="success">Thanks! Your message has been received. We’ll be in touch shortly.</div>
+        <form id="contactForm">
+          <div class="row">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" type="text" placeholder="Jane Doe" required>
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" type="email" placeholder="jane@example.com" required>
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label for="phone">Phone</label>
+              <input id="phone" type="text" placeholder="+44 7…">
+            </div>
+            <div>
+              <label for="serviceInterest">Interested in</label>
+              <select id="serviceInterest">
+                <option>External TM</option>
+                <option>Operator Licence Support</option>
+                <option>Compliance Audit</option>
+                <option>Mission Zero / FORS</option>
+                <option>CPC Training</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Tell us briefly about your fleet and needs…"></textarea>
+          </div>
+          <div class="form-note">By submitting you agree to our terms and privacy policy. (Add links.)</div>
+          <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap">
+            <button type="submit" class="cta">Send</button>
+            <button type="button" class="cta" id="bookCallBtn" style="background:linear-gradient(135deg, var(--brand), var(--warn))">Book a Call</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+  
+<footer class="container">
+  <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:center">
+    <div>© <span id="year"></span> TM Compliance</div>
+    <div>
+      <a href="#">Privacy</a> · <a href="#">Terms</a>
+    </div>
+  </div>
+</footer>
+
+  <script src="js/contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Pricing Page – own CSS/JS -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pricing & Estimates – Transport Management</title>
+  <link rel="stylesheet" href="css/pricing.css" />
+</head>
+<body>
+  
+<header>
+  <div class="container nav">
+    <div class="logo">TM <span>Compliance</span></div>
+    <nav>
+      <a href="index.html" >Home</a>
+      <a href="about.html" >About</a>
+      <a href="services.html" >Services</a>
+      <a href="pricing.html" style="opacity:1;font-weight:700">Pricing</a>
+      <a href="contact.html" >Contact</a>
+      <a href="blog.html" >Blog</a>
+      <button class="cta" id="bookBtn">Book Consultation</button>
+    </nav>
+  </div>
+</header>
+
+  <main class="section">
+    <div class="container">
+      <h2>Pricing & Estimates</h2>
+      <p class="muted">Quick, transparent estimates. Final quotes may vary after a short consultation.</p>
+      <div class="card">
+        <h3>Estimate your cost</h3>
+        <div class="estimator">
+          <div>
+            <label for="serviceSelect">Service</label>
+            <select id="serviceSelect">
+              <option value="lightETM">External TM (Light Use)</option>
+              <option value="fullETM">Full TM Service (Heavy Use)</option>
+              <option value="audit">Compliance Audit (one-off)</option>
+              <option value="cpc">CPC Course (per driver)</option>
+            </select>
+          </div>
+          <div>
+            <label for="fleetSize">Fleet Size (vehicles or drivers for CPC)</label>
+            <input id="fleetSize" type="number" min="1" value="3">
+          </div>
+          <div>
+            <label for="duration">Duration (months, retainers only)</label>
+            <input id="duration" type="number" min="1" value="6">
+          </div>
+          <div>
+            <label for="location">Location</label>
+            <select id="location">
+              <option value="standard">Standard</option>
+              <option value="urban">Urban/Central</option>
+              <option value="remote">Remote</option>
+            </select>
+          </div>
+          <div class="result">
+            <div class="muted">Estimated Monthly Cost</div>
+            <strong id="estimateValue">£—</strong>
+            <div class="muted" style="margin-top:6px">This is a guide. We’ll confirm after a quick call.</div>
+            <div style="margin-top:12px">
+              <a class="cta" href="contact.html">Get a Formal Quote</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:16px">
+        <h3>Starting prices (ex. VAT)</h3>
+        <div class="table">
+          <div>
+            <p>External TM (Light Use)</p>
+            <strong>from £450 / month</strong>
+          </div>
+          <div>
+            <p>Full TM Service (Heavy Use)</p>
+            <strong>from £850 / month</strong>
+          </div>
+          <div>
+            <p>Compliance Audit</p>
+            <strong>from £250 (one-off)</strong>
+          </div>
+          <div>
+            <p>CPC Course (per driver)</p>
+            <strong>£60–£75 / session</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+<footer class="container">
+  <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:center">
+    <div>© <span id="year"></span> TM Compliance</div>
+    <div>
+      <a href="#">Privacy</a> · <a href="#">Terms</a>
+    </div>
+  </div>
+</footer>
+
+  <script src="js/pricing.js"></script>
+</body>
+</html>

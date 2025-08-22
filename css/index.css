@@ -1,0 +1,82 @@
+/* ===============================
+   Base Styles (mobile-first)
+   This file is page-specific; common rules are duplicated
+   on each page to keep each page self-contained as requested.
+   =============================== */
+:root{
+  --bg:#0f172a;          /* slate-900 */
+  --card:#0b1226;        /* slightly lighter */
+  --text:#e5e7eb;        /* gray-200 */
+  --muted:#94a3b8;       /* slate-400 */
+  --brand:#60a5fa;       /* blue-400 */
+  --brand-600:#2563eb;   /* blue-600 */
+  --ok:#22c55e;          /* green-500 */
+  --warn:#f59e0b;        /* amber-500 */
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+  --radius: 16px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  color:var(--text); background: radial-gradient(1000px 600px at 10% -10%, #1e293b, transparent), var(--bg);
+  line-height:1.55;
+}
+a{color:var(--brand); text-decoration:none}
+img{max-width:100%; display:block}
+.container{max-width:1100px; margin:0 auto; padding:0 20px}
+.section{padding:64px 0}
+h1,h2,h3{line-height:1.2; margin:0 0 12px}
+h1{font-size: clamp(28px, 4vw, 44px)}
+h2{font-size: clamp(22px, 3vw, 32px)}
+p{color:var(--text)}
+.muted{color:var(--muted)}
+
+/* Header */
+header{ position:sticky; top:0; z-index:50; background:rgba(11,18,38,.7); backdrop-filter: blur(8px); border-bottom:1px solid rgba(148,163,184,.15) }
+.nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+.logo{font-weight:700; letter-spacing:.3px}
+.logo span{color:var(--brand)}
+.nav a{margin-left:60px; color:var(--text); opacity:.85}
+.nav a:hover{opacity:1}
+.cta{background:linear-gradient(135deg, var(--brand), var(--brand-600)); border:none; color:white; padding:10px 16px; border-radius:999px; box-shadow:var(--shadow); cursor:pointer}
+
+/* Logo + wordmark in header */
+.logo { display: flex; align-items: center; }
+.brand { 
+  display: flex; 
+  align-items: center; 
+  gap: 10px; 
+  text-decoration: none; 
+  color: var(--text);
+}
+.logo-img { 
+  height: 44px;          /* tweak to your liking */
+  width: auto; 
+  display: block;
+}
+.wordmark { 
+  font-weight: 700; 
+  letter-spacing: .3px;
+}
+.wordmark span { color: var(--brand); }
+
+/* Optional: hide the text on very small screens */
+@media (max-width: 480px) {
+  .wordmark { display: none; }
+}
+
+
+/* Cards & grid */
+.grid{display:grid; gap:18px}
+.card{background:var(--card); border:1px solid rgba(148,163,184,.15); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow)}
+
+/* Footer */
+footer{padding:32px 0; color:#9aa4b2; border-top:1px solid rgba(148,163,184,.15)}
+
+/* Home page extras */
+.hero{display:grid; gap:24px; grid-template-columns:1fr; align-items:center; padding:48px 0 24px}
+@media(min-width:720px){ .hero{grid-template-columns: 1.2fr .8fr} }
+.hero-card{background:linear-gradient(180deg, rgba(96,165,250,.08), rgba(37,99,235,.05)); border:1px solid rgba(148,163,184,.2); border-radius:var(--radius); padding:24px; box-shadow:var(--shadow)}
+.chips{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px}
+.chip{padding:6px 10px; background:rgba(148,163,184,.15); border-radius:999px; font-size:12px; color:#cbd5e1}
