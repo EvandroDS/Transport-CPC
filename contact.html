@@ -4,38 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact – CRUZ Compliance</title>
-
-  <!-- Global styles used by the homepage -->
-  <link rel="stylesheet" href="css/style.css" />
-  <!-- Page-specific refinements -->
-  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="css/netlify-form.css" />
 </head>
 <body>
-
-<header>
-  <div class="container nav">
-    <div class="logo">
-      <a href="index.html" class="brand">
-        <img src="images/cruz-logo.jpeg" alt="CRUZ Compliance logo" class="logo-img" />
-        <span class="wordmark">CRUZ <span>Compliance</span></span>
-      </a>
-    </div>
-
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html" class="active">Contact</a>
-      <button class="cta" id="bookBtn">Book Consultation</button>
-    </nav>
-  </div>
-</header>
 
 <main class="section">
   <div class="container">
     <h1>Contact</h1>
     <p class="muted">Fill in the form and we’ll get back within 1 business day.</p>
 
-    <!-- Netlify form -->
+    <!-- ✅ Netlify form -->
     <form
       name="contact"
       method="POST"
@@ -43,64 +21,47 @@
       data-netlify="true"
       netlify-honeypot="bot-field"
       class="card contact-card"
-      id="contactForm"
     >
+      <!-- Netlify needs this hidden field -->
       <input type="hidden" name="form-name" value="contact" />
-      <p hidden><label>Don’t fill this out: <input name="bot-field" /></label></p>
 
-      <div class="grid form-grid">
-        <label>
-          <div>Name</div>
+      <!-- Honeypot field -->
+      <p class="hidden-field"><label>Don’t fill this out: <input name="bot-field" /></label></p>
+
+      <div class="grid">
+        <div class="field">
+          <label for="name">Name</label>
           <input id="name" name="name" type="text" placeholder="Jane Doe" required />
-        </label>
+        </div>
 
-        <label>
-          <div>Email</div>
+        <div class="field">
+          <label for="email">Email</label>
           <input id="email" name="email" type="email" placeholder="jane@example.com" required />
-        </label>
+        </div>
 
-        <label>
-          <div>Phone</div>
+        <div class="field">
+          <label for="phone">Phone (optional)</label>
           <input id="phone" name="phone" type="tel" placeholder="+44 7..." />
-        </label>
+        </div>
 
-        <label>
-          <div>Interested in</div>
-          <select id="serviceInterest" name="service">
-            <option>External TM</option>
-            <option>Operator Licence Support</option>
-            <option>Compliance Audit</option>
-            <option>Mission Zero / FORS</option>
-            <option>CPC Training</option>
-          </select>
-        </label>
 
-        <label class="span-all">
-          <div>Message</div>
+        <div class="field span-all">
+          <label for="message">Message</label>
           <textarea id="message" name="message" rows="6" placeholder="Tell us briefly about your fleet and needs..." required></textarea>
-        </label>
+        </div>
       </div>
 
-      <p class="muted legal">By submitting you agree to our <a href="#">terms</a> and <a href="#">privacy policy</a>.</p>
+      <p class="muted legal">
+        By submitting you agree to our <a href="#">terms</a> and <a href="#">privacy policy</a>.
+      </p>
 
       <div class="actions">
         <button class="cta" type="submit">Send</button>
-        <a id="bookCallBtn" class="cta secondary" href="https://calendly.com/YOUR-LINK" target="_blank" rel="noopener">Book a Call</a>
+        <a class="cta secondary" href="https://calendly.com/YOUR-LINK" target="_blank" rel="noopener">Book a Call</a>
       </div>
     </form>
   </div>
 </main>
 
-<footer class="container">
-  <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:center">
-    <div>© <span id="year"></span> TM Compliance</div>
-    <div><a href="#">Privacy</a> · <a href="#">Terms</a></div>
-  </div>
-</footer>
-
-<script>
-  // footer year
-  var y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();
-</script>
 </body>
 </html>
