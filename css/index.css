@@ -1,8 +1,4 @@
-/* ===============================
-   Base Styles (mobile-first)
-   This file is page-specific; common rules are duplicated
-   on each page to keep each page self-contained as requested.
-   =============================== */
+
 :root{
   --bg:#0f172a;          /* slate-900 */
   --card:#0b1226;        /* slightly lighter */

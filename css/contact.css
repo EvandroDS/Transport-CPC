@@ -1,55 +1,125 @@
-/* ===============================
-   Base Styles (mobile-first)
-   This file is page-specific; common rules are duplicated
-   on each page to keep each page self-contained as requested.
-   =============================== */
-:root{
-  --bg:#0f172a;          /* slate-900 */
-  --card:#0b1226;        /* slightly lighter */
-  --text:#e5e7eb;        /* gray-200 */
-  --muted:#94a3b8;       /* slate-400 */
-  --brand:#60a5fa;       /* blue-400 */
-  --brand-600:#2563eb;   /* blue-600 */
-  --ok:#22c55e;          /* green-500 */
-  --warn:#f59e0b;        /* amber-500 */
-  --shadow: 0 10px 30px rgba(0,0,0,.35);
-  --radius: 16px;
+/* --- Header polish to match Home --- */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(11,18,38,.7);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(148,163,184,.15);
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji","Segoe UI Emoji";
-  color:var(--text); background: radial-gradient(1000px 600px at 10% -10%, #1e293b, transparent), var(--bg);
-  line-height:1.55;
+.nav {
+  display:flex; align-items:center; justify-content:space-between;
+  padding: 14px 0;
 }
-a{color:var(--brand); text-decoration:none}
-img{max-width:100%; display:block}
-.container{max-width:1100px; margin:0 auto; padding:0 20px}
-.section{padding:64px 0}
-h1,h2,h3{line-height:1.2; margin:0 0 12px}
-h1{font-size: clamp(28px, 4vw, 44px)}
-h2{font-size: clamp(22px, 3vw, 32px)}
-p{color:var(--text)}
-.muted{color:var(--muted)}
+.logo { display:flex; align-items:center; font-weight:700; letter-spacing:.3px; }
+.logo-img { height: 44px; width:auto; display:block; border-radius: 8px; }
+.wordmark { font-weight:700; letter-spacing:.3px; margin-left: 10px; }
+.wordmark span { color: var(--brand); }
 
-/* Header */
-header{ position:sticky; top:0; z-index:50; background:rgba(11,18,38,.7); backdrop-filter: blur(8px); border-bottom:1px solid rgba(148,163,184,.15) }
-.nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
-.logo{font-weight:700; letter-spacing:.3px}
-.logo span{color:var(--brand)}
-.nav a{margin-left:16px; color:var(--text); opacity:.85}
-.nav a:hover{opacity:1}
-.cta{background:linear-gradient(135deg, var(--brand), var(--brand-600)); border:none; color:white; padding:10px 16px; border-radius:999px; box-shadow:var(--shadow); cursor:pointer}
+/* nav links look/spacing + active state */
+nav { display:flex; align-items:center; gap: 40px; }
+nav a { color: var(--text); opacity:.8; text-decoration:none; font-weight:500; }
+nav a:hover { opacity:1; }
+nav a.active { opacity:1; font-weight:700; color:#fff; }
 
-/* Cards & grid */
-.grid{display:grid; gap:18px}
-.card{background:var(--card); border:1px solid rgba(148,163,184,.15); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow)}
+/* Keep CTA styled like homepage */
+.cta {
+  background: linear-gradient(135deg, var(--brand), var(--brand-600));
+  border:none; color:#fff; padding:10px 16px; border-radius:999px;
+  box-shadow: var(--shadow); cursor:pointer; font-weight:700;
+}
 
-/* Footer */
-footer{padding:32px 0; color:#9aa4b2; border-top:1px solid rgba(148,163,184,.15)}
+/* --- Page heading spacing/scale --- */
+main.section .container > h1{
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 800;
+  letter-spacing: .2px;
+  margin-bottom: 6px;
+}
+main.section .container > .muted{
+  font-size: clamp(15px, 1.6vw, 18px);
+  margin-bottom: 22px;
+  color: var(--muted);
+}
 
-/* Contact page extras */
-form .row{display:grid; gap:12px}
-@media(min-width:720px){ form .row{grid-template-columns:1fr 1fr} }
-.form-note{font-size:12px; color:#9ca3af}
-.success{border:1px solid rgba(34,197,94,.5); background:rgba(34,197,94,.08); color:#a7f3d0; padding:12px; border-radius:8px; display:none}
+/* --- Form card (hero-like) --- */
+.contact-card{
+  --ring: rgba(96,165,250,.25);
+  --border: rgba(148,163,184,.18);
+  --panel1: rgba(96,165,250,.08);
+  --panel2: rgba(37,99,235,.05);
+
+  max-width: 980px;         /* similar to hero width */
+  margin: 0 auto;           /* center it */
+  padding: 28px;
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, var(--panel1), var(--panel2)),
+    radial-gradient(1100px 600px at -20% -40%, rgba(96,165,250,.12), transparent);
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.04);
+}
+
+/* Grid */
+.form-grid{ display:grid; gap:18px; grid-template-columns: 1fr; }
+@media (min-width: 820px){
+  .form-grid { grid-template-columns: 1fr 1fr; }
+  .form-grid .span-all { grid-column: 1 / -1; }
+}
+
+/* Labels */
+.contact-card label{ display:block; }
+.contact-card label > div{ margin-bottom:8px; font-weight:600; letter-spacing:.2px; }
+
+/* Inputs / selects / textareas */
+.contact-card input[type="text"],
+.contact-card input[type="email"],
+.contact-card input[type="tel"],
+.contact-card select,
+.contact-card textarea{
+  width:100%;
+  padding:14px 16px;
+  border-radius:14px;
+  border:1px solid rgba(148,163,184,.22);
+  background: linear-gradient(180deg, #0f172a, #0b1226);
+  color:var(--text);
+  outline:none;
+  transition: border-color .15s, box-shadow .15s, transform .06s;
+  appearance:none;
+}
+.contact-card textarea{ min-height:160px; resize:vertical; }
+.contact-card input::placeholder,
+.contact-card textarea::placeholder{ color:#90a4b8; }
+
+.contact-card input:focus,
+.contact-card select:focus,
+.contact-card textarea:focus{
+  border-color: var(--brand);
+  box-shadow: 0 0 0 4px var(--ring);
+}
+
+.contact-card select{
+  background-image:
+    linear-gradient(180deg, #0f172a, #0b1226),
+    radial-gradient(circle at right 14px center, #94a3b8 2px, transparent 3px);
+  background-repeat:no-repeat,no-repeat;
+  background-position: right 12px center, right 16px center;
+  padding-right: 40px;
+}
+
+/* Legal note + actions */
+.contact-card .legal{ margin: 12px 0 16px; }
+.actions{ display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+.actions .cta{
+  background: linear-gradient(135deg, var(--brand), var(--brand-600));
+  border:none; color:#fff; padding:12px 18px; border-radius:999px;
+  font-weight:700; box-shadow: var(--shadow); text-decoration:none;
+  display:inline-flex; align-items:center; justify-content:center;
+  transition: transform .06s, filter .15s;
+}
+.actions .cta:hover{ filter:brightness(1.05); }
+.actions .cta:active{ transform: translateY(1px); }
+.actions .secondary{ background: linear-gradient(135deg, #9CA3AF, #6B7280); color:#fff; }
+
+/* Section spacing like hero */
+main.section{ padding-top:72px; }

@@ -1,5 +1,4 @@
-// Common helpers duplicated per page to keep files independent.
-// Sets footer year and wires up booking buttons (replace with your real links).
+
 
 (function(){
   // Footer year
@@ -21,4 +20,4 @@
   if (bookCallBtn) bookCallBtn.addEventListener('click', openBooking);
 })();
 
-// Services-specific JS placeholder.
+// this where i can add some comments to make it easier  to read the all doc. it depends on the situation that am at 
