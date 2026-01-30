@@ -1,60 +1,172 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <!-- About Page – own CSS/JS -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About – Transport Management Services</title>
-  <link rel="stylesheet" href="css/about.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cruz Compliance | About</title>
+  <link rel="stylesheet" href="css/site.css" />
+  <style>
+    /* About page layout (kept here so we stay step-by-step) */
+    .page-head{ padding-top:22px; margin-bottom:18px; }
+    .page-head h1{ margin:0 0 8px 0; font-size: 34px; letter-spacing:-0.4px; }
+    .page-head p{ margin:0; color: rgba(255,255,255,0.70); max-width:70ch; line-height:1.6; }
+
+    .about-grid{
+      display:grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap:16px;
+      margin-top:18px;
+    }
+    .pad{ padding:22px; }
+    .muted{ color: rgba(255,255,255,0.70); line-height:1.65; }
+    .tiny{ color: rgba(255,255,255,0.55); font-size:13px; line-height:1.6; }
+
+    .points{ margin:14px 0 0 0; padding-left:18px; color: rgba(255,255,255,0.70); }
+    .points li{ margin:10px 0; }
+
+    .stats{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:12px;
+      margin-top:14px;
+    }
+    .stat{
+      padding:14px;
+      border-radius:18px;
+      background: rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.10);
+    }
+    .stat strong{ display:block; font-size:16px; }
+    .stat span{ display:block; margin-top:6px; color: rgba(255,255,255,0.55); font-size:12px; }
+
+    .cta-row{ display:flex; gap:12px; flex-wrap:wrap; margin-top:16px; }
+
+    @media (max-width: 980px){
+      .about-grid{ grid-template-columns: 1fr; }
+      .stats{ grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
+
 <body>
-  
-<header>
-  <div class="container nav">
-    <div class="logo">CRUZ <span>Compliance</span></div>
-    <nav>
-      <a href="index.html" >Home</a>
-      <a href="about.html" style="opacity:1;font-weight:700">About</a>
-      <a href="services.html" >Services</a>
-      <a href="contact.html" >Contact</a>
-      <button class="cta" id="bookBtn">Book Consultation</button>
-    </nav>
+  <div class="bg">
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+    <div class="noise"></div>
   </div>
-</header>
 
-  <main class="section">
-    <div class="container profile">
-      <div class="card">
-        <h2>About Us</h2>
-        <p>We provide external transport management and compliance support for operators. Add your personal bio here—your background, certifications, and approach.</p>
-        <p>If your brother is involved, describe his role and experience too.</p>
-        <div>
-          <span class="badge">FORS</span>
-          <span class="badge">DVSA</span>
-          <span class="badge">Mission Zero</span>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <div class="brand-logo" aria-hidden="true"><span>CC</span></div>
+        <div class="brand-text">
+          <div class="brand-name">CRUZ <span>Compliance</span></div>
+          <div class="brand-tag">Transport & Fleet Support</div>
         </div>
-      </div>
-      <div class="card">
-        <h3>Our Approach</h3>
-        <p class="muted">Practical, transparent, and focused on keeping your operation compliant and efficient.</p>
-        <ul>
-          <li>Clear onboarding and documentation.</li>
-          <li>Regular checks and actionable reports.</li>
-          <li>Friendly support, remote or on-site.</li>
-        </ul>
-      </div>
-    </div>
-  </main>
-  
-<footer class="container">
-  <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:center">
-    <div>© <span id="year"></span> TM Compliance</div>
-    <div>
-      <a href="#">Privacy</a> · <a href="#">Terms</a>
-    </div>
-  </div>
-</footer>
+      </a>
 
-  <script src="js/about.js"></script>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="contact.html" class="nav-cta">Get in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="container">
+      <div class="page-head">
+        <h1>About Cruz Compliance</h1>
+        <p>
+          We support operators with practical transport compliance. If you need help with your Operator’s Licence,
+          an External Transport Manager, or you want to tighten up your systems before an audit, we make it simple.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Left: main about card -->
+        <div class="card pad">
+          <h2 style="margin:0 0 10px 0; font-size:22px;">What we do</h2>
+          <p class="muted" style="margin:0 0 10px 0;">
+            Cruz Compliance provides straight, real-world guidance to keep your operation safe and compliant.
+            We focus on what matters: systems that work, clear documentation, and reducing risk.
+          </p>
+
+          <ul class="points">
+            <li>Operator’s Licence applications, variations and ongoing support</li>
+            <li>External Transport Manager (ETM) cover, short-term or long-term</li>
+            <li>Compliance audits and action plans to fix gaps</li>
+            <li>Support aligned with FORS / DVSA expectations</li>
+          </ul>
+
+          <div class="cta-row">
+            <a class="btn primary" href="contact.html">Speak to us</a>
+            <a class="btn ghost" href="services.html">View services</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <strong>Practical</strong>
+              <span>No waffle, just actions</span>
+            </div>
+            <div class="stat">
+              <strong>Flexible</strong>
+              <span>Cover that fits your needs</span>
+            </div>
+            <div class="stat">
+              <strong>Supportive</strong>
+              <span>We explain it clearly</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: why choose us card -->
+        <aside class="card pad">
+          <h2 style="margin:0 0 10px 0; font-size:22px;">Why choose us?</h2>
+          <p class="tiny" style="margin:0 0 12px 0;">
+            We work with operators who want clear answers and a safer, more compliant operation.
+          </p>
+
+          <ul class="points" style="margin-top:0;">
+            <li>Qualified Transport Manager with real-world fleet experience</li>
+            <li>Clear pricing and honest guidance</li>
+            <li>Fast response and consistent communication</li>
+            <li>Support tailored to your fleet and workload</li>
+          </ul>
+
+          <div class="cta-row">
+            <a class="btn primary" href="contact.html">Request a quote</a>
+            <a class="btn ghost" href="index.html">Back to home</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-title">Cruz Compliance</div>
+        <div class="footer-muted">Transport compliance support & external TM services.</div>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-copy">© <span id="year"></span> Cruz Compliance. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="js/site.js"></script>
 </body>
 </html>

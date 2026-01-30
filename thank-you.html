@@ -1,21 +1,118 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Thanks – CRUZ Compliance</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/contact.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cruz Compliance | Thank You</title>
+  <link rel="stylesheet" href="css/site.css" />
+  <style>
+    .wrap{
+      padding-top:40px;
+      display:grid;
+      place-items:center;
+      min-height: calc(100vh - 120px);
+    }
+    .box{
+      width:min(720px, 100%);
+      padding:26px;
+      text-align:left;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 12px;
+      border-radius:999px;
+      background: rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.10);
+      color: rgba(255,255,255,0.82);
+      font-size:13px;
+      margin-bottom:14px;
+    }
+    .tick{
+      width:22px; height:22px; border-radius:999px;
+      display:grid; place-items:center;
+      background: rgba(110,231,255,0.18);
+      border:1px solid rgba(110,231,255,0.28);
+      font-weight:800;
+    }
+    h1{ margin:0 0 10px 0; font-size:32px; letter-spacing:-0.4px; }
+    p{ margin:0; color: rgba(255,255,255,0.70); line-height:1.65; max-width:70ch; }
+    .actions{ display:flex; gap:12px; flex-wrap:wrap; margin-top:18px; }
+  </style>
 </head>
+
 <body>
-  <main class="section">
-    <div class="container hero-card">
-      <h1>Thanks — we’ve got your message.</h1>
-      <p class="muted">We’ll get back to you within 1 business day.</p>
-      <div style="margin-top:16px">
-        <a class="cta" href="index.html">Back to Home</a>
-      </div>
+  <div class="bg">
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+    <div class="noise"></div>
+  </div>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <div class="brand-logo" aria-hidden="true"><span>CC</span></div>
+        <div class="brand-text">
+          <div class="brand-name">CRUZ <span>Compliance</span></div>
+          <div class="brand-tag">Transport & Fleet Support</div>
+        </div>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="contact.html" class="nav-cta">Get in touch</a>
+      </nav>
     </div>
+  </header>
+
+  <main class="main">
+    <section class="container wrap">
+      <div class="card box">
+        <div class="badge">
+          <span class="tick">✓</span>
+          Message sent
+        </div>
+
+        <h1>Thanks, we’ve received your message.</h1>
+        <p>
+          We’ll get back to you within 1 business day. If it’s urgent, call us and we’ll advise you quickly.
+        </p>
+
+        <div class="actions">
+          <a class="btn primary" href="index.html">Back to home</a>
+          <a class="btn ghost" href="services.html">View services</a>
+          <a class="btn ghost" href="contact.html">Send another message</a>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-title">Cruz Compliance</div>
+        <div class="footer-muted">Transport compliance support & external TM services.</div>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-copy">© <span id="year"></span> Cruz Compliance. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="js/site.js"></script>
 </body>
 </html>
