@@ -5,6 +5,147 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cruz Compliance | Home</title>
   <link rel="stylesheet" href="css/site.css" />
+  <style>
+    .hero-wrap{
+      display:grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap:22px;
+      padding-top:22px;
+      align-items:stretch;
+    }
+
+    .kpi-row{
+      margin-top:16px;
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap:12px;
+    }
+    .kpi{
+      padding:14px;
+      border-radius:16px;
+      background: rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.09);
+    }
+    .kpi .big{ font-weight:900; font-size:18px; }
+    .kpi .small{ margin-top:4px; color: rgba(255,255,255,0.60); font-size:12px; }
+
+    .section{
+      margin-top:18px;
+    }
+    .section h2{
+      margin:0 0 10px 0;
+      font-size:20px;
+      letter-spacing:-0.2px;
+    }
+    .section p{
+      margin:0;
+      color: rgba(255,255,255,0.70);
+      line-height:1.6;
+      max-width:85ch;
+    }
+
+    .services-grid{
+      margin-top:14px;
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:16px;
+    }
+    .svc{
+      padding:18px;
+    }
+    .svc .icon{
+      width:42px; height:42px; border-radius:14px;
+      display:grid; place-items:center;
+      background: rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.12);
+      margin-bottom:12px;
+      font-size:18px;
+    }
+    .svc h3{ margin:0 0 8px 0; font-size:18px; }
+    .svc p{ margin:0; color: rgba(255,255,255,0.70); line-height:1.6; }
+
+    .how{
+      margin-top:14px;
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:16px;
+    }
+    .step{
+      padding:18px;
+    }
+    .step .num{
+      width:34px; height:34px;
+      border-radius:12px;
+      display:grid; place-items:center;
+      font-weight:900;
+      background: rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.12);
+      margin-bottom:10px;
+    }
+    .step h3{ margin:0 0 6px 0; font-size:16px; }
+    .step p{ margin:0; color: rgba(255,255,255,0.70); line-height:1.6; font-size:14px; }
+
+    .trust-strip{
+      margin-top:18px;
+      padding:18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+    .trust-strip .left{
+      min-width:260px;
+    }
+    .trust-strip .left .title{
+      font-weight:900;
+      letter-spacing:0.2px;
+    }
+    .trust-strip .left .sub{
+      margin-top:6px;
+      color: rgba(255,255,255,0.65);
+      font-size:13px;
+      line-height:1.6;
+      max-width:70ch;
+    }
+    .trust-strip .badges{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .badge{
+      padding:10px 12px;
+      border-radius:999px;
+      font-size:13px;
+      color: rgba(255,255,255,0.82);
+      background: rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.10);
+      white-space:nowrap;
+    }
+
+    .cta-wide{
+      margin-top:18px;
+      padding:22px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+    .cta-wide h2{ margin:0 0 6px 0; font-size:22px; }
+    .cta-wide p{ margin:0; color: rgba(255,255,255,0.70); max-width:75ch; }
+
+    @media (max-width: 980px){
+      .hero-wrap{ grid-template-columns: 1fr; }
+      .kpi-row{ grid-template-columns: repeat(2, 1fr); }
+      .services-grid{ grid-template-columns: repeat(2, 1fr); }
+      .how{ grid-template-columns: 1fr; }
+    }
+    @media (max-width: 680px){
+      .services-grid{ grid-template-columns: 1fr; }
+      .kpi-row{ grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 
 <body>
@@ -29,7 +170,7 @@
       </button>
 
       <nav class="nav" id="nav">
-        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html" class="nav-link active">Home</a>
         <a href="about.html" class="nav-link">About</a>
         <a href="services.html" class="nav-link">Services</a>
         <a href="contact.html" class="nav-link">Contact</a>
@@ -39,7 +180,8 @@
   </header>
 
   <main class="main">
-    <section class="container" style="display:grid; grid-template-columns: 1.5fr 1fr; gap:22px; padding-top:22px;">
+    <section class="container hero-wrap">
+
       <!-- Left hero card -->
       <div class="card" style="padding:28px;">
         <h1 style="margin:0 0 12px 0; font-size: clamp(30px, 3.8vw, 52px); line-height:1.05; letter-spacing:-0.6px;">
@@ -49,16 +191,16 @@
         </h1>
 
         <p style="margin:0 0 18px 0; color: rgba(255,255,255,0.70); font-size:15.5px; max-width:60ch;">
-          Help with Operator’s Licences, compliance audits, Mission Zero schemes, ETM cover,
-          and CPC driver training.
+          Practical support for operators: Driver CPC training, compliance audits, Operator Licence guidance,
+          and External Transport Manager cover when you need it.
         </p>
 
         <div style="display:flex; flex-wrap:wrap; gap:10px; margin:18px 0 18px;">
-          <a class="btn" href="services.html">Operator Licence Support</a>
-          <a class="btn" href="services.html">External TM (ETM)</a>
+          <a class="btn" href="services.html">Driver CPC Training</a>
           <a class="btn" href="services.html">Compliance Audits</a>
-          <a class="btn" href="services.html">Mission Zero</a>
-          <a class="btn" href="services.html">CPC Training</a>
+          <a class="btn" href="services.html">External TM (ETM)</a>
+          <a class="btn" href="services.html">Operator Licence Support</a>
+          <a class="btn" href="services.html">FORS / DVSA Readiness</a>
         </div>
 
         <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:4px;">
@@ -66,18 +208,23 @@
           <a class="btn ghost" href="services.html">View services</a>
         </div>
 
-        <div style="display:flex; gap:14px; flex-wrap:wrap; margin-top:20px; padding-top:16px; border-top:1px solid rgba(255,255,255,0.10);">
-          <div style="min-width:130px;">
-            <div style="font-weight:800;">Fast</div>
-            <div style="font-size:12px; color: rgba(255,255,255,0.55); margin-top:4px;">response times</div>
+        <!-- Proof / KPI row -->
+        <div class="kpi-row">
+          <div class="kpi">
+            <div class="big">Fast</div>
+            <div class="small">responses & clear next steps</div>
           </div>
-          <div style="min-width:130px;">
-            <div style="font-weight:800;">Clear</div>
-            <div style="font-size:12px; color: rgba(255,255,255,0.55); margin-top:4px;">pricing & advice</div>
+          <div class="kpi">
+            <div class="big">UK</div>
+            <div class="small">operator-focused support</div>
           </div>
-          <div style="min-width:130px;">
-            <div style="font-weight:800;">UK</div>
-            <div style="font-size:12px; color: rgba(255,255,255,0.55); margin-top:4px;">fleet experience</div>
+          <div class="kpi">
+            <div class="big">CPC</div>
+            <div class="small">training for LGV & PCV</div>
+          </div>
+          <div class="kpi">
+            <div class="big">Audit-ready</div>
+            <div class="small">systems, paperwork, checks</div>
           </div>
         </div>
       </div>
@@ -87,9 +234,9 @@
         <h2 style="margin:0 0 12px 0; font-size:22px;">Why choose us?</h2>
         <ul style="margin:0; padding-left:18px; color: rgba(255,255,255,0.70);">
           <li style="margin:10px 0;">Qualified Transport Manager with real-world fleet experience.</li>
-          <li style="margin:10px 0;">Flexible: temporary cover or long-term ETM.</li>
-          <li style="margin:10px 0;">Clear pricing and no-nonsense advice.</li>
-          <li style="margin:10px 0;">Support for FORS / DVSA / Mission Zero.</li>
+          <li style="margin:10px 0;">Flexible support: urgent cover or ongoing help.</li>
+          <li style="margin:10px 0;">Straight advice that helps you stay compliant.</li>
+          <li style="margin:10px 0;">Support aligned with FORS / DVSA expectations.</li>
         </ul>
 
         <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:16px;">
@@ -97,14 +244,108 @@
           <a class="btn ghost" href="about.html">Learn more</a>
         </div>
       </aside>
+
     </section>
+
+    <!-- Trusted strip -->
+    <section class="container section">
+      <div class="card trust-strip">
+        <div class="left">
+          <div class="title">Trusted support for busy operators</div>
+          <div class="sub">
+            If you need CPC training, audit support, or Transport Manager cover, we keep it simple:
+            clear guidance, proper documentation, and quick turnaround.
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge">Driver CPC (LGV/PCV)</span>
+          <span class="badge">External TM support</span>
+          <span class="badge">Compliance audits</span>
+          <span class="badge">Operator licence guidance</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services preview -->
+    <section class="container section">
+      <h2>What we help with</h2>
+      <p>Pick the service you need. If you’re unsure, message us and we’ll point you in the right direction.</p>
+
+      <div class="services-grid">
+        <article class="card svc">
+   
+          <h3>Driver CPC Training</h3>
+          <p>7-hour courses for LGV & PCV drivers. Group bookings and module advice.</p>
+          <div style="margin-top:14px;">
+            <a class="btn primary" href="services.html">View training</a>
+          </div>
+        </article>
+
+        <article class="card svc">
+ 
+          <h3>Compliance Audits</h3>
+          <p>Find gaps, fix issues, and get an action plan you can actually follow.</p>
+          <div style="margin-top:14px;">
+            <a class="btn primary" href="services.html">See audits</a>
+          </div>
+        </article>
+
+        <article class="card svc">
+
+          <h3>External TM (ETM)</h3>
+          <p>Short-term cover or ongoing Transport Manager support for your operation.</p>
+          <div style="margin-top:14px;">
+            <a class="btn primary" href="services.html">ETM support</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="container section">
+      <h2>How it works</h2>
+      <p>Quick, simple, and clear from the first message.</p>
+
+      <div class="how">
+        <div class="card step">
+          <div class="num">1</div>
+          <h3>Tell us what you need</h3>
+          <p>Send a message with your service type (CPC / Audit / ETM / O-licence) and location.</p>
+        </div>
+        <div class="card step">
+          <div class="num">2</div>
+          <h3>We confirm the plan</h3>
+          <p>We’ll explain the next steps, timing, and what paperwork or access we need.</p>
+        </div>
+        <div class="card step">
+          <div class="num">3</div>
+          <h3>Get it sorted</h3>
+          <p>Training delivered or compliance support completed, with clear evidence and documentation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="container section">
+      <div class="card cta-wide">
+        <div>
+          <h2>Ready to get started?</h2>
+          <p>Message us with what you need and we’ll come back with clear next steps.</p>
+        </div>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="btn primary" href="contact.html">Get in touch</a>
+          <a class="btn ghost" href="services.html">View services</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="footer">
     <div class="container footer-inner">
       <div>
         <div class="footer-title">Cruz Compliance</div>
-        <div class="footer-muted">Transport compliance support & external TM services.</div>
+        <div class="footer-muted">Transport compliance support & Driver CPC training.</div>
       </div>
 
       <div class="footer-links">
