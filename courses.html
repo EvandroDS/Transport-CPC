@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cruz Compliance | Courses</title>
+  <link rel="stylesheet" href="css/site.css" />
+
+  <!-- Page-only styling (uses your global colours + layout rules) -->
+  <style>
+    /* Page spacing */
+    .page{
+      padding: 44px 0 70px;
+      background: var(--muted-bg);
+    }
+
+    .page h1{
+      margin: 0 0 22px 0;
+      font-size: clamp(40px, 4vw, 64px);
+      letter-spacing: -0.9px;
+      color: #0a1a3a;
+    }
+
+    /* Card / panel to match screenshot */
+    .panel{
+      background: #e9edf3;
+      border-radius: 24px;
+      padding: 28px 28px;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.06);
+    }
+
+    .panel h2{
+      margin: 0 0 14px 0;
+      font-size: 22px;
+      letter-spacing: -0.2px;
+      color: #0a1a3a;
+      line-height: 1.25;
+    }
+
+    .panel p{
+      margin: 0;
+      color: #5b667d;
+      line-height: 1.9;
+      font-size: 16px;
+      max-width: 60ch;
+    }
+
+    .panel ul{
+      margin: 10px 0 0 0;
+      padding-left: 20px;
+      color: #5b667d;
+      line-height: 1.95;
+      font-size: 16px;
+    }
+
+    .panel li{
+      margin: 6px 0;
+    }
+
+    /* Grid like screenshot (3 columns) */
+    .course-grid{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+    }
+
+    /* Bottom card (single) */
+    .bottom-wrap{
+      margin-top: 26px;
+      width: min(520px, 100%);
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .course-grid{ grid-template-columns: 1fr; }
+      .bottom-wrap{ width: 100%; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Cruz Compliance">
+        <span class="logo-mark">C</span>
+        <span class="logo-text">
+          <span class="logo-text-top">ruz</span><br />
+          <span class="logo-text-bottom">ompliance</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="top-nav" aria-label="Primary">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About Us</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link active" href="courses.html">Courses</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-icons" aria-label="Actions">
+        <a class="icon-btn" href="#" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M20 20l-3.2-3.2"></path>
+          </svg>
+        </a>
+        <a class="icon-btn" href="#" aria-label="Account">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21a8 8 0 0 0-16 0"></path>
+            <circle cx="12" cy="8" r="4"></circle>
+          </svg>
+        </a>
+        <a class="icon-btn" href="#" aria-label="Basket">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 7h12l-1.2 14H7.2L6 7z"></path>
+            <path d="M9 7a3 3 0 0 1 6 0"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Mobile nav -->
+    <div class="mobile-nav" id="mobileNav">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="about.html">About Us</a>
+      <a class="nav-link" href="services.html">Services</a>
+      <a class="nav-link active" href="courses.html">Courses</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+      <a class="nav-link" href="shop.html">Shop</a>
+      <a class="nav-link" href="legal.html">Legal</a>
+    </div>
+  </header>
+
+  <!-- PAGE -->
+  <main class="page">
+    <div class="container">
+      <h1>Courses</h1>
+
+      <section class="course-grid" aria-label="Courses grid">
+        <!-- LEFT CARD -->
+        <article class="panel">
+          <h2>Transport Manager and OLAT</h2>
+          <p>
+            Tailored training and refresher support for Transport Managers and operators.
+            We keep it practical and focused on what you actually need for compliance.
+          </p>
+        </article>
+
+        <!-- MIDDLE CARD -->
+        <article class="panel">
+          <h2>PCV available courses - 3.5 Hour Modules</h2>
+          <ul>
+            <li>Hours and Tachos</li>
+            <li>Bridge Strikes</li>
+            <li>Driver Fit 2 Drive</li>
+            <li>Drugs &amp; Alcohol</li>
+            <li>Vehicle Security</li>
+            <li>Defensive Driving &amp; VRU’s</li>
+            <li>Highway Code</li>
+            <li>Speed Reduction &amp; Eco Driving</li>
+            <li>Road Emergencies</li>
+            <li>Fines, Penalties &amp; PI’s</li>
+            <li>Vehicle Technology &amp; AFV’s</li>
+            <li>Conflict, Unconscious Bias Resilience</li>
+            <li>Walkround Checks</li>
+            <li>Manual Handling, Health &amp; Safety and Banksman</li>
+            <li>Customer Care (PCV)</li>
+            <li>School Run &amp; Safeguarding (PCV)</li>
+            <li>Vehicle evacuation (PCV)</li>
+            <li>Disability &amp; PSVAR (PCV)</li>
+          </ul>
+        </article>
+
+        <!-- RIGHT CARD -->
+        <article class="panel">
+          <h2>LGV available courses - 3.5 Hour Modules</h2>
+          <ul>
+            <li>Hours and Tachos</li>
+            <li>Bridge Strikes</li>
+            <li>Driver Fit 2 Drive</li>
+            <li>Drugs &amp; Alcohol</li>
+            <li>Vehicle Security</li>
+            <li>Defensive Driving &amp; VRU’s</li>
+            <li>Highway Code</li>
+            <li>Speed Reduction &amp; Eco Driving</li>
+            <li>Road Emergencies</li>
+            <li>Fines, Penalties &amp; PI’s</li>
+            <li>Vehicle Technology &amp; AFV’s</li>
+            <li>Conflict, Unconscious Bias Resilience</li>
+            <li>Walkround Checks</li>
+            <li>Manual Handling, Health &amp; Safety and Banksman</li>
+            <li>Customer Care (LGV)</li>
+            <li>Safe Loading (LGV)</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- Bottom single card -->
+      <section class="bottom-wrap" aria-label="Additional modules">
+        <article class="panel" style="margin-top: 26px;">
+          <h2>LGV or PCV - 7 Hour Modules</h2>
+          <ul>
+            <li>2 Day Transport Manager Refresher</li>
+            <li>OLAT Operators Licence Awareness Training</li>
+            <li>Safe &amp; Economical Driving Skills</li>
+            <li>Driver Safety Compliance Roundup (Induction)</li>
+            <li>Emergency First Aid for professional drivers</li>
+            <li>First Aid for Mental Health</li>
+            <li>Continental Driving (PCV)</li>
+          </ul>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container footer-top-inner">
+        <h3>Contact Cruz Compliance</h3>
+        <p>Email : ivan@cruzcompliance.co.uk  Phone Number : 07404 808636</p>
+        <p>Consortiummember number : CM02283/147</p>
+        <p>DVSA / JAUPT accredited (LGV &amp; PCV)</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div class="footer-links">
+          <span>© 2026, cruzcompliance Powered by Shopify</span>
+          <a href="legal.html">Privacy policy</a>
+          <a href="legal.html">Cookie preferences</a>
+        </div>
+        <div class="footer-pay">
+          <div class="pay-badge" aria-label="PayPal">P</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple mobile nav toggle (matches your global class names)
+    const btn = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    if (btn && mobileNav) {
+      btn.addEventListener('click', () => mobileNav.classList.toggle('show'));
+    }
+  </script>
+</body>
+</html>

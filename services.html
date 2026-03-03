@@ -3,200 +3,181 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cruz Compliance | Services</title>
+  <title>Our Services | Cruz Compliance</title>
   <link rel="stylesheet" href="css/site.css" />
-  <style>
-    .page-head{ padding-top:22px; margin-bottom:18px; }
-    .page-head h1{ margin:0 0 8px 0; font-size: 34px; letter-spacing:-0.4px; }
-    .page-head p{ margin:0; color: rgba(255,255,255,0.70); max-width:75ch; line-height:1.6; }
-
-    .grid{
-      margin-top:18px;
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:16px;
-    }
-    .service-card{ padding:18px; }
-    .icon{
-      width:42px; height:42px; border-radius:14px;
-      display:grid; place-items:center;
-      background: rgba(255,255,255,0.08);
-      border:1px solid rgba(255,255,255,0.12);
-      margin-bottom:12px;
-      font-size:18px;
-    }
-    .service-card h3{ margin:0 0 8px 0; font-size:18px; }
-    .service-card p{ margin:0; color: rgba(255,255,255,0.70); line-height:1.6; }
-
-    .tags{ display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
-    .tag{
-      padding:10px 12px;
-      border-radius:999px;
-      font-size:13px;
-      color: rgba(255,255,255,0.82);
-      background: rgba(255,255,255,0.06);
-      border:1px solid rgba(255,255,255,0.10);
-    }
-
-    .cta{
-      margin-top:18px;
-      padding:22px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:14px;
-    }
-    .cta h2{ margin:0 0 6px 0; font-size:22px; }
-    .cta p{ margin:0; color: rgba(255,255,255,0.70); }
-
-    @media (max-width: 980px){
-      .grid{ grid-template-columns: repeat(2, 1fr); }
-      .cta{ flex-direction:column; align-items:flex-start; }
-    }
-    @media (max-width: 680px){
-      .grid{ grid-template-columns: 1fr; }
-    }
-  </style>
 </head>
 
 <body>
-  <div class="bg">
-    <div class="glow glow-1"></div>
-    <div class="glow glow-2"></div>
-    <div class="noise"></div>
+
+<!-- HEADER (same as other pages) -->
+<header class="site-header">
+  <div class="container header-inner">
+
+    <a class="logo" href="index.html">
+      <div class="logo-mark">C</div>
+      <div class="logo-text">
+        <div class="logo-text-top">ruz</div>
+        <div class="logo-text-bottom">ompliance</div>
+      </div>
+    </a>
+
+    <button class="nav-toggle" id="navToggle">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="top-nav">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="about.html">About Us</a>
+      <a class="nav-link active" href="services.html">Services</a>
+      <a class="nav-link" href="courses.html">Courses</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="services-hero">
+  <div class="services-hero-media"></div>
+  <div class="container services-hero-overlay">
+    <h1>Our Services</h1>
+  </div>
+</section>
+
+<!-- MAIN SERVICES GRID -->
+<section class="services-main">
+  <div class="container services-grid">
+
+    <!-- COLUMN 1 -->
+    <div class="service-card">
+      <h3>Operator Licence Awareness Training (OLAT)</h3>
+      <p>Designed for directors, business owners, and managers to fully understand O Licence undertakings and responsibilities.</p>
+
+      <h4>Transport Manager CPC Refresher</h4>
+      <p>CPD-accredited refresher training to keep TMs aligned with legislation, enforcement expectations, and best practice.</p>
+
+      <h4>First Aid & Mental Health Awareness</h4>
+      <p>Workplace-focused training supporting driver wellbeing, safety culture, and duty of care obligations.</p>
+    </div>
+
+    <!-- COLUMN 2 -->
+    <div class="service-card">
+      <h3>Driver CPC (DVSA/FORS Approved)</h3>
+      <p>Interactive modules covering:</p>
+      <ul>
+        <li>Driver hours & tachographs</li>
+        <li>Vehicle checks & defect reporting</li>
+        <li>Road safety & legal updates</li>
+        <li>Compliance awareness review</li>
+      </ul>
+    </div>
+
+    <!-- COLUMN 3 -->
+    <div class="service-card">
+      <h3>External Transport Management</h3>
+      <p>CPC-qualified External Transport Manager services providing statutory oversight, compliance systems, and proactive risk control.</p>
+
+      <p>Includes:</p>
+      <ul>
+        <li>Monthly compliance reporting</li>
+        <li>Maintenance & inspection oversight</li>
+        <li>Tachograph & driver hours monitoring</li>
+        <li>Audit preparation & DVSA representation</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECOND SERVICES GRID -->
+<section class="services-secondary">
+  <div class="container services-grid">
+
+    <div class="service-card">
+      <h3>FORS & Earned Recognition Preparation</h3>
+      <ul>
+        <li>Gap analysis</li>
+        <li>Policy development</li>
+        <li>Audit readiness preparation</li>
+        <li>Ongoing compliance monitoring</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <h3>Operator Licence Support</h3>
+      <ul>
+        <li>GV79 completion & submission</li>
+        <li>Financial standing guidance</li>
+        <li>Public notice compliance</li>
+        <li>Traffic Commissioner liaison</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <h3>Compliance Audits & Risk Reduction</h3>
+      <ul>
+        <li>Driver hours & tachograph compliance</li>
+        <li>PMI & maintenance systems</li>
+        <li>Defect reporting processes</li>
+        <li>Driver qualification files</li>
+        <li>O Licence undertakings review</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- CATEGORY CARDS (IMAGE CARDS ROW) -->
+<section class="services-categories">
+  <div class="container categories-grid">
+
+    <a href="#" class="category-card">
+      <img src="images/services/audits.jpg" alt="">
+      <span>Audits & DVSA Preparation →</span>
+    </a>
+
+    <a href="#" class="category-card">
+      <img src="images/services/consultancy.jpg" alt="">
+      <span>Compliance & Consultancy →</span>
+    </a>
+
+    <a href="#" class="category-card">
+      <img src="images/services/cpc.jpg" alt="">
+      <span>Driver Training & CPC →</span>
+    </a>
+
+    <a href="#" class="category-card">
+      <img src="images/services/assessments.jpg" alt="">
+      <span>Driving Assessments →</span>
+    </a>
+
+    <a href="#" class="category-card">
+      <img src="images/services/wellbeing.jpg" alt="">
+      <span>Welfare & Wellbeing Training →</span>
+    </a>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="container footer-top-inner">
+      <h3>Contact Cruz Compliance</h3>
+      <p>Email : ivan@cruzcompliance.co.uk Phone Number : 07404 808636</p>
+      <p>Consortiummember number : CM02283/147</p>
+      <p>DVSA / JAUPT accredited (LGV & PCV)</p>
+    </div>
   </div>
 
-  <header class="header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <div class="brand-logo" aria-hidden="true"><span>CC</span></div>
-        <div class="brand-text">
-          <div class="brand-name">CRUZ <span>Compliance</span></div>
-          <div class="brand-tag">Transport & Fleet Support</div>
-        </div>
-      </a>
-
-      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav class="nav" id="nav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="services.html" class="nav-link active">Services</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-        <a href="contact.html" class="nav-cta">Get in touch</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="main">
-    <section class="container">
-      <div class="page-head">
-        <h1>Services</h1>
-        <p>
-          Practical support for operators and drivers. From Driver CPC training to audits and Transport Manager cover,
-          we help you stay compliant and keep things moving.
-        </p>
-
-        <div class="tags">
-          <span class="tag">Driver CPC Training</span>
-          <span class="tag">Compliance Audits</span>
-          <span class="tag">External TM Cover</span>
-          <span class="tag">Operator Licence Support</span>
-          <span class="tag">FORS / DVSA Readiness</span>
-        </div>
-      </div>
-
-      <div class="grid">
-
-        <article class="card service-card">
-  
-          <h3>Driver CPC Training</h3>
-          <p>7-hour Driver CPC courses for LGV and PCV drivers. Group bookings and tailored modules available.</p>
-          <div style="margin-top:14px;">
-            <a class="btn primary" href="contact.html">Enquire</a>
-          </div>
-        </article>
-
-        <article class="card service-card">
-   
-          <h3>External Transport Manager (ETM)</h3>
-          <p>Short-term cover or ongoing support to keep your operation compliant and supported.</p>
-          <div style="margin-top:14px;">
-            <a class="btn primary" href="contact.html">Enquire</a>
-          </div>
-        </article>
-
-        <article class="card service-card">
-    
-          <h3>Compliance Audits & Action Plans</h3>
-          <p>Identify gaps, fix issues, and get a clear action plan that works in the real world.</p>
-          <div style="margin-top:14px;">
-            <a class="btn primary" href="contact.html">Enquire</a>
-          </div>
-        </article>
-
-        <article class="card service-card">
-   
-          <h3>Operator Licence Support</h3>
-          <p>Applications, variations, maintenance and ongoing compliance support for your O-Licence.</p>
-          <div style="margin-top:14px;">
-            <a class="btn primary" href="contact.html">Enquire</a>
-          </div>
-        </article>
-
-        <article class="card service-card">
-    
-          <h3>Policies & Documentation</h3>
-          <p>Driver files, defect reporting, audit trails, and compliance paperwork set up properly.</p>
-          <div style="margin-top:14px;">
-            <a class="btn primary" href="contact.html">Enquire</a>
-          </div>
-        </article>
-
-        <article class="card service-card">
-      
-          <h3>FORS / DVSA Readiness</h3>
-          <p>Support preparing for inspections and schemes, including systems, records and standards.</p>
-          <div style="margin-top:14px;">
-            <a class="btn primary" href="contact.html">Enquire</a>
-          </div>
-        </article>
-
-      </div>
-
-      <div class="card cta">
-        <div>
-          <h2>Not sure what you need?</h2>
-          <p>Send a quick message and we’ll recommend the right support for your operation.</p>
-        </div>
-        <div style="display:flex; gap:12px; flex-wrap:wrap;">
-          <a class="btn primary" href="contact.html">Contact us</a>
-          <a class="btn ghost" href="about.html">About us</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div>
-        <div class="footer-title">Cruz Compliance</div>
-        <div class="footer-muted">Transport compliance support & Driver CPC training.</div>
-      </div>
-
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
       <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
+        © 2026, cruzcompliance · Privacy policy · Cookie preferences
       </div>
-
-      <div class="footer-copy">© <span id="year"></span> Cruz Compliance. All rights reserved.</div>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <script src="js/site.js"></script>
 </body>
 </html>

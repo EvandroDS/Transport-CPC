@@ -5,75 +5,153 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cruz Compliance | Contact</title>
   <link rel="stylesheet" href="css/site.css" />
+
   <style>
-    .page-head{ padding-top:22px; margin-bottom:18px; }
-    .page-head h1{ margin:0 0 8px 0; font-size: 34px; letter-spacing:-0.4px; }
-    .page-head p{ margin:0; color: rgba(255,255,255,0.70); max-width:75ch; line-height:1.6; }
+    /* Page background matches your light theme sections */
+    .page{
+      padding: 44px 0 70px;
+      background: var(--muted-bg);
+    }
+
+    .page-head h1{
+      margin: 0 0 10px 0;
+      font-size: clamp(40px, 4vw, 64px);
+      letter-spacing: -0.9px;
+      color:#0a1a3a;
+    }
+    .page-head p{
+      margin: 0;
+      color: #5b667d;
+      line-height: 1.8;
+      max-width: 75ch;
+      font-size: 16px;
+    }
 
     .split{
+      margin-top: 22px;
       display:grid;
       grid-template-columns: 1.25fr 1fr;
-      gap:16px;
-      margin-top:18px;
+      gap: 26px;
       align-items:start;
     }
-    .pad{ padding:22px; }
 
+    /* Same card look as your Courses page */
+    .panel{
+      background: #e9edf3;
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.06);
+    }
+
+    .panel h2{
+      margin: 0 0 14px 0;
+      font-size: 22px;
+      letter-spacing: -0.2px;
+      color:#0a1a3a;
+      line-height: 1.25;
+    }
+
+    /* Form */
     .form{ display:flex; flex-direction:column; gap:14px; }
+
     .grid2{
       display:grid;
       grid-template-columns: 1fr 1fr;
-      gap:14px;
+      gap: 14px;
     }
     .span-all{ grid-column: 1 / -1; }
 
-    .field label{ display:block; font-size:13px; color: rgba(255,255,255,0.55); margin-bottom:6px; }
-    .field input, .field textarea{
+    .field label{
+      display:block;
+      font-size: 13px;
+      color:#5b667d;
+      margin-bottom: 7px;
+      font-weight: 600;
+    }
+
+    .field input,
+    .field textarea{
       width:100%;
-      padding:12px 12px;
-      border-radius:14px;
-      border:1px solid rgba(255,255,255,0.12);
-      background: rgba(3,10,26,0.35);
-      color: rgba(255,255,255,0.92);
-      outline:none;
-    }
-    .field input:focus, .field textarea:focus{
-      border-color: rgba(110,231,255,0.35);
+      padding: 12px 12px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--text);
+      outline: none;
+      font-size: 15px;
     }
 
-    .tiny{ font-size:12px; line-height:1.5; margin:0; color: rgba(255,255,255,0.55); }
+    .field input:focus,
+    .field textarea:focus{
+      border-color: rgba(11,42,111,0.35);
+      box-shadow: 0 0 0 4px rgba(11,42,111,0.08);
+    }
 
+    .tiny{
+      font-size: 12.5px;
+      line-height: 1.6;
+      margin: 0;
+      color: #5b667d;
+    }
+    .tiny a{
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* Info rows */
     .info-row{
-      display:flex; justify-content:space-between; gap:14px;
-      padding:10px 0;
-      border-bottom:1px solid rgba(255,255,255,0.08);
+      display:flex;
+      justify-content:space-between;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(11,22,51,0.08);
     }
-    .info-label{ color: rgba(255,255,255,0.55); font-size:13px; }
-    .info-value{ color: rgba(255,255,255,0.92); font-weight:600; }
+    .info-label{
+      color:#5b667d;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .info-value{
+      color:#0a1a3a;
+      font-weight: 800;
+    }
 
-    .socials{ display:flex; gap:10px; margin-top:16px; }
+    /* Social icons */
+    .socials{ display:flex; gap:10px; margin-top: 16px; }
     .social{
-      width:42px; height:42px; border-radius:14px;
-      display:grid; place-items:center;
-      background: rgba(255,255,255,0.06);
-      border:1px solid rgba(255,255,255,0.10);
-      color: rgba(255,255,255,0.85);
-      font-weight:700;
+      width:42px; height:42px;
+      border-radius: 14px;
+      display:grid;
+      place-items:center;
+      background:#fff;
+      border:1px solid var(--border);
+      color:#0b2a6f;
+      font-weight: 900;
     }
-    .social:hover{ background: rgba(255,255,255,0.10); }
+    .social:hover{
+      background:#f7f8fb;
+    }
 
+    /* Callout */
     .callout{
-      margin-top:18px;
-      padding:14px;
-      border-radius:18px;
-      background: rgba(138,180,255,0.10);
-      border:1px solid rgba(138,180,255,0.18);
+      margin-top: 18px;
+      padding: 14px 14px;
+      border-radius: 18px;
+      background: rgba(11,42,111,0.06);
+      border: 1px solid rgba(11,42,111,0.14);
     }
-    .callout p{ margin:6px 0 0 0; color: rgba(255,255,255,0.70); }
+    .callout strong{ color:#0a1a3a; }
+    .callout p{
+      margin: 6px 0 0 0;
+      color:#5b667d;
+      line-height: 1.8;
+      font-size: 15px;
+    }
 
-    /* Netlify honeypot hide */
+    /* Hide Netlify honeypot */
     .hidden-field{ display:none; }
 
+    /* Responsive */
     @media (max-width: 980px){
       .split{ grid-template-columns: 1fr; }
       .grid2{ grid-template-columns: 1fr; }
@@ -83,37 +161,65 @@
 </head>
 
 <body>
-  <div class="bg">
-    <div class="glow glow-1"></div>
-    <div class="glow glow-2"></div>
-    <div class="noise"></div>
-  </div>
-
-  <header class="header">
+  <!-- HEADER (light theme) -->
+  <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <div class="brand-logo" aria-hidden="true"><span>CC</span></div>
-        <div class="brand-text">
-          <div class="brand-name">CRUZ <span>Compliance</span></div>
-          <div class="brand-tag">Transport & Fleet Support</div>
-        </div>
+      <a class="logo" href="index.html" aria-label="Cruz Compliance">
+        <span class="logo-mark">C</span>
+        <span class="logo-text">
+          <span class="logo-text-top">ruz</span><br />
+          <span class="logo-text-bottom">ompliance</span>
+        </span>
       </a>
 
       <button class="nav-toggle" id="navToggle" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
 
-      <nav class="nav" id="nav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="services.html" class="nav-link">Services</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-        <a href="contact.html" class="nav-cta">Get in touch</a>
+      <nav class="top-nav" aria-label="Primary">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About Us</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="courses.html">Courses</a>
+        <a class="nav-link active" href="contact.html">Contact</a>
       </nav>
+
+      <div class="header-icons" aria-label="Actions">
+        <a class="icon-btn" href="#" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M20 20l-3.2-3.2"></path>
+          </svg>
+        </a>
+        <a class="icon-btn" href="#" aria-label="Account">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21a8 8 0 0 0-16 0"></path>
+            <circle cx="12" cy="8" r="4"></circle>
+          </svg>
+        </a>
+        <a class="icon-btn" href="#" aria-label="Basket">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 7h12l-1.2 14H7.2L6 7z"></path>
+            <path d="M9 7a3 3 0 0 1 6 0"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Mobile nav -->
+    <div class="mobile-nav" id="mobileNav">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="about.html">About Us</a>
+      <a class="nav-link" href="services.html">Services</a>
+      <a class="nav-link" href="courses.html">Courses</a>
+      <a class="nav-link active" href="contact.html">Contact</a>
+      <a class="nav-link" href="shop.html">Shop</a>
+      <a class="nav-link" href="legal.html">Legal</a>
     </div>
   </header>
 
-  <main class="main">
+  <!-- PAGE -->
+  <main class="page">
     <section class="container">
       <div class="page-head">
         <h1>Contact</h1>
@@ -121,9 +227,9 @@
       </div>
 
       <div class="split">
-        <!-- Netlify Form (WORKING) -->
-        <div class="card pad">
-          <h2 style="margin:0 0 10px 0; font-size:22px;">Send a message</h2>
+        <!-- Form -->
+        <div class="panel">
+          <h2>Send a message</h2>
 
           <form
             class="form"
@@ -133,10 +239,8 @@
             data-netlify="true"
             netlify-honeypot="bot-field"
           >
-            <!-- Required hidden input for Netlify -->
             <input type="hidden" name="form-name" value="contact" />
 
-            <!-- Honeypot field (hidden) -->
             <p class="hidden-field">
               <label>Don’t fill this out: <input name="bot-field" /></label>
             </p>
@@ -144,12 +248,12 @@
             <div class="grid2">
               <div class="field">
                 <label for="name">Name</label>
-                <input id="name" name="name" type="text" placeholder="Evandro" required />
+                <input id="name" name="name" type="text" placeholder="Your name" required />
               </div>
 
               <div class="field">
                 <label for="email">Email</label>
-                <input id="email" name="email" type="email" placeholder="evandro@example.com" required />
+                <input id="email" name="email" type="email" placeholder="you@example.com" required />
               </div>
 
               <div class="field">
@@ -163,28 +267,31 @@
                   id="message"
                   name="message"
                   rows="6"
-                  placeholder="Tell us briefly about your fleet and needs..."
+                  placeholder="Tell us briefly about your fleet and what you need help with..."
                   required
                 ></textarea>
               </div>
             </div>
 
-            <button class="btn primary" type="submit">Send</button>
+            <div style="margin-top: 6px;">
+              <button class="btn-primary" type="submit">Send</button>
+            </div>
 
-            <p class="tiny">
-              By submitting you agree to our <a href="#" style="text-decoration:underline;">terms</a> and
-              <a href="#" style="text-decoration:underline;">privacy policy</a>.
+            <p class="tiny" style="margin-top: 10px;">
+              By submitting you agree to our
+              <a href="legal.html">terms</a> and
+              <a href="legal.html">privacy policy</a>.
             </p>
           </form>
         </div>
 
         <!-- Info -->
-        <aside class="card pad">
-          <h2 style="margin:0 0 10px 0; font-size:22px;">Quick contact</h2>
+        <aside class="panel">
+          <h2>Quick contact</h2>
 
           <div class="info-row">
             <span class="info-label">Phone</span>
-            <a class="info-value" href="tel:+441234567890">+44 7404808636</a>
+            <a class="info-value" href="tel:+447404808636">07404 808636</a>
           </div>
 
           <div class="info-row">
@@ -209,32 +316,44 @@
           </div>
 
           <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
-            <a class="btn ghost" href="services.html">View services</a>
-            <a class="btn primary" href="index.html">Back to home</a>
+            <a class="btn-primary" href="services.html">View services</a>
+            <a class="btn-primary" href="index.html" style="background: var(--primary-2);">Back to home</a>
           </div>
         </aside>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div>
-        <div class="footer-title">Cruz Compliance</div>
-        <div class="footer-muted">Transport compliance support & external TM services.</div>
+  <!-- FOOTER (light theme version you’re using) -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container footer-top-inner">
+        <h3>Contact Cruz Compliance</h3>
+        <p>Email : ivan@cruzcompliance.co.uk  Phone Number : 07404 808636</p>
+        <p>Consortiummember number : CM02283/147</p>
+        <p>DVSA / JAUPT accredited (LGV &amp; PCV)</p>
       </div>
+    </div>
 
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div class="footer-links">
+          <span>© 2026, cruzcompliance Powered by Shopify</span>
+          <a href="legal.html">Privacy policy</a>
+          <a href="legal.html">Cookie preferences</a>
+        </div>
+        <div class="footer-pay">
+          <div class="pay-badge" aria-label="PayPal">P</div>
+        </div>
       </div>
-
-      <div class="footer-copy">© <span id="year"></span> Cruz Compliance. All rights reserved.</div>
     </div>
   </footer>
 
-  <script src="js/site.js"></script>
+  <script>
+    // mobile nav toggle
+    const btn = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    if (btn && mobileNav) btn.addEventListener('click', () => mobileNav.classList.toggle('show'));
+  </script>
 </body>
 </html>
